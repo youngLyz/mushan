@@ -1,12 +1,12 @@
 
 $(function(){
-    var cw = window.screen.availWidth;//document.documentElement.clientWidth;
+    var cw = document.documentElement.clientWidth;
     if(cw<1200){
-      //  if(cw<375){
+        if(cw<414){
             document.documentElement.style.fontSize = cw*50/375 +'px';//cw*(window.devicePixelRatio||1) / + 'px';
-        // }else{
-        //     document.documentElement.style.fontSize = '50px';
-        // }
+         }else{
+             document.documentElement.style.fontSize = '50px';
+         }
       //  alert(cw+','+window.devicePixelRatio)       
         
     }else{
