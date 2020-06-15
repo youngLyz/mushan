@@ -1,17 +1,7 @@
 
 $(function(){
-    var cw = document.documentElement.clientWidth;
-    if(cw<1200){
-        if(cw<414){
-            document.documentElement.style.fontSize = cw*50/375 +'px';//cw*(window.devicePixelRatio||1) / + 'px';
-         }else{
-             document.documentElement.style.fontSize = '50px';
-         }
-      //  alert(cw+','+window.devicePixelRatio)       
-        
-    }else{
-        document.documentElement.style.fontSize = cw * 100 / 1920 + 'px';
-    }
+    fontAuto();
+$(window).resize(fontAuto);
     
     $('#xsNavbtn').click(function(){
         if($(this).hasClass('active')){
@@ -63,6 +53,21 @@ AOS.init({
 	duration: 1000,
 	once: true
 });
+//字体
+function fontAuto(){
+ var cw = document.documentElement.clientWidth;
+    if(cw<1200){
+        if(cw<768){
+            document.documentElement.style.fontSize = cw*50/375 +'px';//cw*(window.devicePixelRatio||1) / + 'px';
+         }else{
+             document.documentElement.style.fontSize = '50px';
+         }
+      //  alert(cw+','+window.devicePixelRatio)       
+        
+    }else{
+        document.documentElement.style.fontSize = cw * 100 / 1920 + 'px';
+    }
+}
 //  scoll to Top
 function scrollToTop() {
     if ($('.scroll-to-target').length) {
