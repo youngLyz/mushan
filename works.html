@@ -19,7 +19,7 @@
       <div class="row">
         <div class="col-md-3 col-xs-12">
           <a class="nav-logo" href="index.html">
-            <img class="nav-logo-img" src="assets/image/logo_lg.gif" alt="logo image">
+            <img class="nav-logo-img" src="assets/image/logo.png" alt="logo image">
           </a>
           <button type="button" class="nav-btn d-md-none" id="xsNavbtn"> 
           </button>         
@@ -36,6 +36,28 @@
       </div>
     </div>
   </header>
+  <nav class="sticky-top" id="stickyHeader">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 col-xs-12">
+          <a class="nav-logo" href="index.html">
+            <img class="nav-logo-img" src="assets/image/logo.png" alt="logo image">
+          </a>
+          <button type="button" class="nav-btn d-md-none" id="xsStickyNavbtn"> 
+          </button>         
+        </div>
+        <div class="col-md-9 col-xs-12">
+          <div class="nav-link">
+            <a class="active" href="works.html">作品</a>
+            <a href="ideas.html">理念</a>
+            <a  href="news.html">信息</a>
+            <a href="about.html">我们</a>
+            <a href="contact.html">联系</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
   <nav class="xs-nav-link" id="xsNavList">
     <a href="works.html"><img src="assets/image/works.gif"></a>
     <a href="ideas.html"><img src="assets/image/ideas.gif"></a>
@@ -97,8 +119,8 @@
         </div>
         <div class="read-more">
           <!-- <img class="hidden-xs" alt="read more image" src="assets/image/idea_4.png"> -->
-          <img class="read-more-img" alt="read more image" src="assets/image/read_more_lg.gif">
-          <img class="back-top-img scroll-to-target" data-target="html" alt="back top image" src="assets/image/top_lg.gif">
+          <img class="read-more-img" alt="read more image" src="assets/image/read_more.png">
+          <!-- <img class="back-top-img scroll-to-target" data-target="html" alt="back top image" src="assets/image/top_lg.gif"> -->
         </div>
       </div>
      
@@ -107,7 +129,7 @@
   <footer class="footer">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-6 footer-image">
+        <div class="col-lg-6 col-md-6  footer-image">
          <img class="footer-ms" src="assets/image/ms.png">
          <div class="footer-ms-circle">
           <a class="footer-circle" title="BE" target="_blank" href="https://www.behance.net/403196882b307"><img src="assets/image/ms-link1.gif"></a>
@@ -115,7 +137,7 @@
           <a class="footer-circle" title="新浪微博" target="_blank" href="https://www.weibo.com/"><img src="assets/image/ms-link3.gif"></a>
         </div>  
         </div>
-        <div class="col-sm-6 col-xs-12">
+        <div class="col-lg-6  col-md-6 col-xs-12">
           <div class="footer-contact">
             <p><span>sskmssj@qq.com</span></p>
             <p><span>+15902151931</span></p>
@@ -144,11 +166,8 @@
   
   function rand(m,n){return m+parseInt((n-m)*Math.random());}
 
-	var says=['撞三次改颜色','谁撞我'];
-	var saysLength=says.length;
-	//var oC=document.getElementById('body');
-	var mxwidth=window.innerWidth//screen.availWidth;//oC.offsetWidth;
-	var mxheight=window.innerHeight//screen.availHeight;//oC.offsetHeight;
+	var mxwidth=window.innerWidth;
+	var mxheight=window.innerHeight;
 
 
 	var oB=new CollBox();
@@ -156,7 +175,7 @@
   createBall("ballM");
   createBall("ballS");
 	function createBall(ballId){
-    var b= mxwidth>768?45:15;//rand(200,350);
+    var b= mxwidth>1599?45:(mxwidth>767?25:15);//rand(200,350);
 		var x=rand(b,mxwidth-b);
     var y=rand(b,mxheight-b);
     console.log(x,y)
