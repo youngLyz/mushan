@@ -1002,7 +1002,7 @@ a{text-decoration: none;}
       padding: 0;
       width: 0.45rem;
       height: .38rem;
-      background-image: url(../image/nav_bg.jpg);
+      background-image: url(../image/nav_bg.png);
       position: relative;
       background-size: 100% 100%;
       float:right;      
@@ -1071,7 +1071,7 @@ a{text-decoration: none;}
     .footer-contact{
       float: none;
       margin-left: -15px;
-      margin-right: 0;
+      margin-right: 1.6rem;
     }
     .footer-contact>p{
       font-size: 0.16rem;
@@ -1179,10 +1179,10 @@ a{text-decoration: none;}
     }
     /**works**/
     .works-list{
-      margin: 1rem .54rem;
+      margin: 1rem 0rem;
     }
     .works-list .row{
-      margin: 0 -0.62rem;
+      margin: 0;
     }
     .works-item-head,.works-item-title{
       font-size: .16rem;
